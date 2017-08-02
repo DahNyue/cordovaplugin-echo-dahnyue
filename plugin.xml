@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="cordovaplugin.echo.dahnyue"
+        version="0.1.0">
+
+  <name>Echo</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/echo.js" target="js/echo.js"/>
+
+  <js-module src="www/echo.js" name="echo">
+    <clobbers target="echo" />
+  </js-module>
+
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Echo">
+        <param name="android-package" value="com.example.plugin.Echo"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/Echo.java" target-dir="src/com/example/plugin/"/>
+  </platform>
+
+</plugin>

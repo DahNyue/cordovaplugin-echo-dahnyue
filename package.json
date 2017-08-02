@@ -1,0 +1,31 @@
+{
+  "name": "cordovaplugin-echo-dahnyue",
+  "version": "0.1.0",
+  "description": "Cordova plugin ECHO for android.",
+  "cordova": {
+    "id": "cordovaplugin.echo.dahnyue",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DahNyue/cordovaplugin-echo-dahnyue.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.4.0"
+    }
+  ],
+  "author": "DahNyue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DahNyue/cordovaplugin-echo-dahnyue/issues"
+  },
+  "homepage": "https://github.com/DahNyue/cordovaplugin-echo-dahnyue#readme"
+}
