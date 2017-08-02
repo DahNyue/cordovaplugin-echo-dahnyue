@@ -21,11 +21,13 @@ finally, add plugin.
 [PluginPath] = {gitURL, npmPath, DirectoryPath}
 
 but, It("plugin add") needs 'package.json' made by npm packaging through plugman.
+
 cordova.apache's [Plugin Development Guide](https://cordova.apache.org/docs/en/latest/guide/hybrid/plugins/index.html#sample-javascript) → Publishing Plugins
 
 Fortunately, This Repo. has it, too.
 
-AND VERY IMPORTANT THING!
+_**AND VERY IMPORTANT THING!**_
+
 How use it?
 This is "index.js" in *[project]/www*
 
