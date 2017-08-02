@@ -21,6 +21,46 @@ finally, add plugin.
 [PluginPath] = {gitURL, npmPath, DirectoryPath}
 
 but, It("plugin add") needs 'package.json' made by npm packaging through plugman.
-https://cordova.apache.org/docs/en/latest/guide/hybrid/plugins/index.html#sample-javascript >> Publishing Plugins
+cordova.apache's [Plugin Development Guide](https://cordova.apache.org/docs/en/latest/guide/hybrid/plugins/index.html#sample-javascript) → Publishing Plugins
 
 Fortunately, This Repo. has it, too.
+
+AND VERY IMPORTANT THING!
+How use it?
+This is "index.js" in *[project]/www*
+
+<pre><code>
+var app = {
+    // Application Constructor
+    initialize: function() {
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+    // deviceready Event Handler
+    //
+    // Bind any cordova events here. Common events are:
+    // 'pause', 'resume', etc.
+    onDeviceReady: function() {
+		echo.echo("I believe this is what you wanted.", function(result){
+			alert(result);
+		});
+        this.receivedEvent('deviceready');
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+        var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
+
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
+
+        console.log('Received Event: ' + id);
+    }
+};
+app.initialize();
+
+</code></pre>
+
+onDeviceReady's **echo.echo("I believe this is what you wanted.", function(result){
+			alert(result);
+		});**
